@@ -1,0 +1,48 @@
+<html> 
+   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+     <title>Mesa</title> 
+     <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
+     <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link> 
+   </head> 
+   <body> 
+       
+       
+        <x3d width='500px' height='500px'> 
+            <scene> 
+
+                <Transform translation="0 0 -2">
+                    <shape>
+                        <Appearance>
+                            <Material diffuseColor='0 0 1'/>
+                        </Appearance>
+                        <Box size='5 0.5 5'/>
+                    </shape>
+                </Transform>
+
+                <Transform translation="-2 -2 0">
+                    <shape DEF='Pe_Mesa'>
+                        <Appearance>
+                            <Material diffuseColor='0 0 0'/>
+                        </Appearance>
+                        <Cylinder radius='0.2' height='4'/>
+                    </shape>
+                </Transform>
+
+                <Transform translation="-2 -2 -4">
+                    <shape USE="Pe_Mesa"/>
+                </Transform>
+
+                <Transform translation="2 -2 -4">
+                    <shape USE="Pe_Mesa"/>
+                </Transform>
+
+                <Transform translation="2 -2 0">
+                    <shape USE="Pe_Mesa"/>
+                </Transform>
+
+            </scene>
+
+        </x3d>
+    </body>
+</html>
