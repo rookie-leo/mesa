@@ -8,37 +8,44 @@
    <body> 
        
        
-        <x3d width='500px' height='500px'> 
+        <x3d width='1000px' height='1000px'> 
             <scene> 
+                <group def="Mesa">
 
-                <Transform translation="0 0 -2">
-                    <shape>
-                        <Appearance>
-                            <Material diffuseColor='0 0 1'/>
-                        </Appearance>
-                        <Box size='5 0.5 5'/>
-                    </shape>
-                </Transform>
+                    <Transform translation="0 0 -2">
+                        <shape>
+                            <Appearance>
+                                <Material diffuseColor='0 0 1'/>
+                            </Appearance>
+                            <Box size='5 0.5 5'/>
+                        </shape>
+                    </Transform>
 
-                <Transform translation="-2 -2 0">
-                    <shape DEF='Pe_Mesa'>
-                        <Appearance>
-                            <Material diffuseColor='0 0 0'/>
-                        </Appearance>
-                        <Cylinder radius='0.2' height='4'/>
-                    </shape>
-                </Transform>
+                    <Transform translation="-2 -2 0">
+                        <shape DEF='Pe_Mesa'>
+                            <Appearance>
+                                <Material diffuseColor='0 0 0'/>
+                            </Appearance>
+                            <Cylinder radius='0.2' height='4'/>
+                        </shape>
+                    </Transform>
 
-                <Transform translation="-2 -2 -4">
-                    <shape USE="Pe_Mesa"/>
-                </Transform>
+                    <Transform translation="-2 -2 -4">
+                        <shape USE="Pe_Mesa"/>
+                    </Transform>
 
-                <Transform translation="2 -2 -4">
-                    <shape USE="Pe_Mesa"/>
-                </Transform>
+                    <Transform translation="2 -2 -4">
+                        <shape USE="Pe_Mesa"/>
+                    </Transform>
+                    
+                    <Transform translation="2 -2 0">
+                        <shape USE="Pe_Mesa"/>
+                    </Transform>
+                
+                </group>
 
-                <Transform translation="2 -2 0">
-                    <shape USE="Pe_Mesa"/>
+                <Transform translation="-8 0 0">
+                    <shape USE="Mesa"/>
                 </Transform>
 
             </scene>
